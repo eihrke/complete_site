@@ -1,0 +1,391 @@
+/* Universal Style & Mobile Style */
+
+body {
+    background-color: white;
+    color: black;
+    font-family: "Dekko", Arial;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+    background-color: #006690;
+    background-image: linear-gradient(rgba(0, 102, 144, 0.5), rgba(0, 102, 144, 0.99)), url("../images/bubbles.jpg");
+    color: white;
+    font-weight: bolder;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+h3 {
+    font-size: large;
+    margin-top: 10px;
+}
+
+#skipToMain {
+    display: none;
+}
+
+nav {
+    display: block;
+    background-color: #DDDDDD;
+    border: solid 1px black;
+    position: sticky;
+    z-index: 1;
+}
+
+.linkList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: medium;
+}
+
+.linkList li {
+    display: block;
+    text-align: center;
+    margin: 0px;
+}
+
+.linkList li:hover .linkSublist {
+    display: block;
+}      
+
+nav a {
+    display: block;
+    padding: 8px 10px;
+}
+
+nav a:hover, nav a:focus, #backToTop:hover, #backToTop:focus, .current .linkSublist a:hover, .current .linkSublist a:focus {
+    background-color: #BBBBBB;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+.current {
+    background-color: #077397;
+    color: white;
+    font-weight: bold;
+}
+
+.current a:hover, .current a:focus {
+    background-color: #006690;
+}
+
+.linkSublist {
+    display: none;
+    position: absolute;
+    font-size: small;
+    font-weight: initial;
+    width: 33.35%;
+    color: black;
+    border: solid 1px black;
+    background-color: #DDDDDD;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 10px;
+    right: 35px;
+    background-color: #DDDDDD;
+    border: 1px solid black;
+    padding: 8px 10px;
+    z-index: 1;
+}
+
+nav a:active, #backToTop:active, .current .linkSublist a:active {
+    background-color: #999999;
+}
+
+.Element{
+    margin: 5px 1px;
+    padding: 10px;
+    border: solid 20px #077397;
+    box-sizing: border-box;
+}
+
+.MainText, .Gallery{
+    display: grid;
+    grid-template-columns: auto;
+    border: solid 2px #077397;
+    border-radius: 20px;
+    padding: 20px;
+    gap: 10px;
+    justify-items: space-between;
+    align-items: center;
+}
+
+.MainText img {
+    border: solid 5px #077397;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 1px;
+    width: 100%;
+}
+
+.MainText h3 {
+    text-decoration: underline #077397;
+}
+
+.Gallery img {
+    border: solid 5px #077397;
+    padding: 1px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+img.nonGif {
+    display: none;
+}
+
+figure {
+    position: relative;
+}
+
+figcaption {
+    display: none;
+    position: absolute;
+    top:50%;
+    width: 95%;
+    left:2.5%;
+    height: fit-content;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+}
+
+.Text {
+    border: solid 2px #077397;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+ol li {
+    display: list-item;
+    list-style: decimal inside;
+}
+
+li {
+    display: list-item;
+    list-style: disc inside;
+    margin-left: 10px;
+}
+
+img:hover, img:focus {
+    border: solid 10px #006690
+}
+
+#filterbox {
+    display:none;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    gap: 5px;
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    background-color: #DDDDDD;
+    border: solid 5px #006690;
+    z-index: 2;
+}
+
+#filterbox :first-child {
+    grid-column: -2 / -1;
+}
+
+#filterbox img {
+    grid-column: span 5;
+    justify-self: center;
+    max-height: 80vh;
+    border: solid 5px #077397;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 1px;
+}
+
+#filterbox button {
+    grid-column: span 2;
+    border: solid 1px black;
+    background-color: #077397;
+    color: white;
+    text-align: center;
+    width:100%;
+    height:fit-content;
+    padding: 10px;
+}
+
+#filterbox button:hover, #filterbox button:focus {
+    background-color: #006690;
+    border-width: 3px;
+}
+
+/* Tablet Style */
+@media screen and (min-width: 700px) {
+    .current .linkSublist {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        width: 100.2%;
+        color: black;
+        background-color: #DDDDDD;
+        position: absolute;
+        right: -1px;
+        z-index: -1;
+        border: solid black 1px;
+    }
+
+    .current .linkSublist li {
+        display: inline-block;
+        width: 100%;
+    }
+    
+    .linkSublist :nth-child(5n - 1):nth-last-of-type(1) {
+        grid-column: span 2;
+    }
+
+    .current .linkSublist a:hover, .current .linkSublist a:focus {
+        background-color: #BBBBBB;
+    }
+
+    #skipToMain {
+        display:inline-block;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        color: white;
+        border: solid 1px white;
+        padding: 5px;
+    }
+
+    .current .linkSublist a:active {
+        background-color: #999999;
+    }
+
+    main {
+        margin-top: 40px;
+    }
+
+    .Gallery {
+        grid-template-columns: auto auto;
+    }
+}
+
+/* Monitor Style */
+@media screen and (min-width: 1000px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    header {
+        grid-column: 1/-1;
+        height: 60px;
+        padding:10px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        margin-top: 20px;
+    }
+
+    main {
+        overflow-y: scroll;
+        margin-top: 0px;
+    }
+
+    #skipToMain {
+        left: -1000px;
+    }
+    
+    #skipToMain:focus {
+        left: 10px;
+        top: 10px;
+    }
+    
+    #backToTop {
+        display: none;
+    }
+
+    nav {
+        grid-column: 1/2;
+        border-top-width: 0px;
+        height: fit-content;
+        max-height: 98%;
+        overflow-y: auto;
+    }
+
+    .linkList {
+        display:block;
+    }
+
+    .linkList li {
+        text-align: left;
+        border-top: solid 1px black;
+
+    }
+
+    .linkSublist, .current .linkSublist {
+        display: block;
+        width: 100%;
+        position: static;
+        background-color: #DDDDDD;
+        border-width: 0px;
+        color: black;
+    }
+
+    li.current:hover .linkSublist {
+        display: block;
+    }
+
+    .current .linkSublist li a:hover, .current .linkSublist li a:focus {
+        background-color: #BBBBBB;
+    }
+
+    .Element {
+        margin: 0px 5px 5px 5px;
+        border-width: 40px;
+        padding: 20px 40px;
+    }
+
+    .MainText{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .MainText img {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .Gallery {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .Text {
+        padding: 10px;
+    }
+
+    #filterbox {
+        grid-column: 1/-1;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    img.nonGif {
+        display: block;
+    }
+
+    img.Gif {
+        display: none;
+    }
+}
