@@ -335,7 +335,7 @@ img:hover, img:focus {
 
     }
 
-    .linkSublist, .current .linkSublist {
+    .linkSublist, .current .linkSublist, .linkList li:hover .linkSublist {
         display: block;
         width: 100%;
         position: static;
