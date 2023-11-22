@@ -28,7 +28,7 @@ h3 {
     margin-top: 10px;
 }
 
-#skipToMain {
+#skip-to-main {
     display: none;
 }
 
@@ -40,19 +40,19 @@ nav {
     z-index: 1;
 }
 
-.linkList {
+.link-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     font-size: medium;
 }
 
-.linkList li {
+.link-list li {
     display: block;
     text-align: center;
     margin: 0px;
 }
 
-.linkList li:hover .linkSublist {
+.link-list li:hover .link-sublist {
     display: block;
 }      
 
@@ -61,7 +61,7 @@ nav a {
     padding: 8px 10px;
 }
 
-nav a:hover, nav a:focus, #backToTop:hover, #backToTop:focus, .current .linkSublist a:hover, .current .linkSublist a:focus {
+nav a:hover, nav a:focus, #back-to-top:hover, #back-to-top:focus, .current .link-sublist a:hover, .current .link-sublist a:focus {
     background-color: #BBBBBB;
 }
 
@@ -79,7 +79,7 @@ a:hover, a:focus {
     background-color: #006690;
 }
 
-.linkSublist {
+.link-sublist {
     display: none;
     position: absolute;
     font-size: small;
@@ -90,7 +90,7 @@ a:hover, a:focus {
     background-color: #DDDDDD;
 }
 
-#backToTop {
+#back-to-top {
     position: fixed;
     bottom: 10px;
     right: 35px;
@@ -100,18 +100,18 @@ a:hover, a:focus {
     z-index: 1;
 }
 
-nav a:active, #backToTop:active, .current .linkSublist a:active {
+nav a:active, #back-to-top:active, .current .link-sublist a:active {
     background-color: #999999;
 }
 
-.Element{
+.element{
     margin: 5px 1px;
     padding: 10px;
     border: solid 20px #077397;
     box-sizing: border-box;
 }
 
-.MainText, .Gallery{
+.main-text, .gallery{
     display: grid;
     grid-template-columns: auto;
     border: solid 2px #077397;
@@ -122,7 +122,7 @@ nav a:active, #backToTop:active, .current .linkSublist a:active {
     align-items: center;
 }
 
-.MainText img {
+.main-text img {
     border: solid 5px #077397;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -130,18 +130,18 @@ nav a:active, #backToTop:active, .current .linkSublist a:active {
     width: 100%;
 }
 
-.MainText h3 {
+.main-text h3 {
     text-decoration: underline #077397;
 }
 
-.Gallery img {
+.gallery img {
     border: solid 5px #077397;
     padding: 1px;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
 
-img.nonGif {
+img.non-gif {
     display: none;
 }
 
@@ -162,7 +162,7 @@ figcaption {
     text-align: center;
 }
 
-.Text {
+.text {
     border: solid 2px #077397;
     border-radius: 20px;
     padding: 5px;
@@ -183,7 +183,7 @@ img:hover, img:focus {
     border: solid 10px #006690
 }
 
-#filterbox {
+#filter-box {
     display:none;
     grid-template-columns: repeat(10, minmax(0, 1fr));
     gap: 5px;
@@ -198,11 +198,11 @@ img:hover, img:focus {
     z-index: 2;
 }
 
-#filterbox :first-child {
+#filter-box :first-child {
     grid-column: -2 / -1;
 }
 
-#filterbox img {
+#filter-box img {
     grid-column: span 5;
     justify-self: center;
     max-height: 80vh;
@@ -212,7 +212,7 @@ img:hover, img:focus {
     padding: 1px;
 }
 
-#filterbox button {
+#filter-box button {
     grid-column: span 2;
     border: solid 1px black;
     background-color: #077397;
@@ -223,14 +223,14 @@ img:hover, img:focus {
     padding: 10px;
 }
 
-#filterbox button:hover, #filterbox button:focus {
+#filter-box button:hover, #filter-box button:focus {
     background-color: #006690;
     border-width: 3px;
 }
 
 /* Tablet Style */
 @media screen and (min-width: 700px) {
-    .current .linkSublist, .linkList li:hover .linkSublist {
+    .current .link-sublist, .link-list li:hover .link-sublist {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         width: 100.2%;
@@ -242,20 +242,20 @@ img:hover, img:focus {
         border: solid black 1px;
     }
 
-    .current .linkSublist li {
+    .current .link-sublist li {
         display: inline-block;
         width: 100%;
     }
     
-    .linkSublist :nth-child(5n - 1):nth-last-of-type(1) {
+    .link-sublist :nth-child(5n - 1):nth-last-of-type(1) {
         grid-column: span 2;
     }
 
-    .current .linkSublist a:hover, .current .linkSublist a:focus {
+    .current .link-sublist a:hover, .current .link-sublist a:focus {
         background-color: #BBBBBB;
     }
 
-    #skipToMain {
+    #skip-to-main {
         display:inline-block;
         position: absolute;
         left: 5px;
@@ -265,7 +265,7 @@ img:hover, img:focus {
         padding: 5px;
     }
 
-    .current .linkSublist a:active {
+    .current .link-sublist a:active {
         background-color: #999999;
     }
 
@@ -273,7 +273,7 @@ img:hover, img:focus {
         margin-top: 40px;
     }
 
-    .Gallery {
+    .gallery {
         grid-template-columns: auto auto;
     }
 }
@@ -304,16 +304,16 @@ img:hover, img:focus {
         margin-top: 0px;
     }
 
-    #skipToMain {
+    #skip-to-main {
         left: -1000px;
     }
     
-    #skipToMain:focus {
+    #skip-to-main:focus {
         left: 10px;
         top: 10px;
     }
     
-    #backToTop {
+    #back-to-top {
         display: none;
     }
 
@@ -325,17 +325,17 @@ img:hover, img:focus {
         overflow-y: auto;
     }
 
-    .linkList {
+    .link-list {
         display:block;
     }
 
-    .linkList li {
+    .link-list li {
         text-align: left;
         border-top: solid 1px black;
 
     }
 
-    .linkSublist, .current .linkSublist, .linkList li:hover .linkSublist {
+    .link-sublist, .current .link-sublist, .link-list li:hover .link-sublist {
         display: block;
         width: 100%;
         position: static;
@@ -344,30 +344,30 @@ img:hover, img:focus {
         color: black;
     }
 
-    li.current:hover .linkSublist {
+    li.current:hover .link-sublist {
         display: block;
     }
 
-    .current .linkSublist li a:hover, .current .linkSublist li a:focus {
+    .current .link-sublist li a:hover, .current .link-sublist li a:focus {
         background-color: #BBBBBB;
     }
 
-    .Element {
+    .element {
         margin: 0px 5px 5px 5px;
         border-width: 40px;
         padding: 20px 40px;
     }
 
-    .MainText{
+    .main-text{
         grid-template-columns: 1fr 1fr;
     }
 
-    .MainText img {
+    .main-text img {
         border-top-right-radius: 0px;
         border-bottom-left-radius: 20px;
     }
 
-    .Gallery {
+    .gallery {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
@@ -375,17 +375,17 @@ img:hover, img:focus {
         padding: 10px;
     }
 
-    #filterbox {
+    #filter-box {
         grid-column: 1/-1;
     }
 }
 
 @media(prefers-reduced-motion: reduce) {
-    img.nonGif {
+    img.non-gif {
         display: block;
     }
 
-    img.Gif {
+    img.gif {
         display: none;
     }
 }

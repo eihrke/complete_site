@@ -1,5 +1,5 @@
 imgs = document.querySelectorAll("img")
-box = document.querySelector("#filterbox")
+box = document.querySelector("#filter-box")
 original = document.querySelector("#original")
 filtered = document.querySelector("#filtered")
 
